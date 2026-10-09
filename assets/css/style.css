@@ -1,0 +1,210 @@
+/* ==========================================================================
+   UTOPIAN CONSULTANCY & CONSTRUCTION - Custom Stylesheet
+   Modern, Vibrant & Interactive Civil Engineering Styling
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #ea580c; /* Utopian Orange */
+  --primary-hover: #c2410c;
+  --primary-light: #ffedd5;
+  --secondary: #0f172a; /* Deep Slate Navy */
+  --accent-blue: #0284c7;
+  --accent-green: #10b981; /* Eco-green */
+  --accent-amber: #f59e0b;
+  --bg-dark: #090d16;
+  --card-dark: #111827;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Blueprint Grid Background */
+.bg-blueprint {
+  background-color: #0b1120;
+  background-image: 
+    linear-gradient(rgba(234, 88, 12, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 88, 12, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(234, 88, 12, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Glow effects */
+.glow-orange {
+  box-shadow: 0 0 30px -5px rgba(234, 88, 12, 0.35);
+}
+
+.glow-blue {
+  box-shadow: 0 0 30px -5px rgba(14, 165, 233, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(234, 88, 12, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #ea580c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+/* Pulse animation for live indicators */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.pulse-badge {
+  animation: pulse-ring 2.5s infinite ease-in-out;
+}
+
+/* Project card image hover zoom */
+.project-card .project-img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.06);
+}
+
+/* Interactive Tabs Active State */
+.filter-tab.active {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  color: #ffffff;
+  border-color: #ea580c;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+}
+
+/* Modal animation */
+.modal-overlay {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-content {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.modal-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-hidden .modal-content {
+  transform: scale(0.95) translateY(10px);
+}
+
+/* Custom range slider for Civil Cost Estimator */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #334155;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ea580c;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.6);
+  border: 2px solid #ffffff;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #f97316;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ea580c;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.6);
+  border: 2px solid #ffffff;
+}
+
+/* Floating WhatsApp button pulse */
+.floating-whatsapp {
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+.floating-whatsapp:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* Toast alert notification */
+#toast-notification {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+#toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
