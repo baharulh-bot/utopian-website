@@ -568,10 +568,10 @@ const officeData = {
   nalbari_hq: {
     name: 'Nalbari Corporate Head Office',
     type: 'Registered Corporate Office',
-    address: 'Near Nalbari Baro Masjid / NT Road, near Vishal Mega Mart, Barama Road, Nalbari, Assam - 781335',
+    address: 'NT Road, near Vishal Mega Mart, Opposite Indian Oil Petrol Pump, Nalbari, Assam, Pin Code-781335',
     phone: '+91-84028-60632 / +91-98646-88249',
     hours: 'Monday – Saturday: 9:00 AM – 8:00 PM',
-    mapQuery: 'Barama Road Nalbari Baro Masjid Assam 781335',
+    mapQuery: 'Utopian+Consultancy+and+Construction/@26.4503607,91.4473608/',
     tag: 'Principal Operations & Client Meetings'
   },
   nalbari_workshop: {
